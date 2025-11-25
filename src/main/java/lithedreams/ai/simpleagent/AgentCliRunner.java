@@ -14,6 +14,14 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class AgentCliRunner {
 
     public static void main(String[] args) {
+        {
+            String key = System.getenv("GOOGLE_API_KEY");
+            if (key == null || key.isBlank()) {
+                throw new IllegalStateException(
+                        "GOOGLE_API_KEY is required. Copy simpleagent/.env.example to .env and set your key, or provide it via environment variables");
+            }
+        }
+
         RunConfig runConfig = RunConfig.builder().build();
         InMemoryRunner runner = new InMemoryRunner(HelloTimeAgent.ROOT_AGENT);
 
