@@ -82,9 +82,9 @@
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.1.0</version>
-        <configuration>
+        <!-- <configuration>
           <mainClass>lithedreams.ai.simpleagent.AgentCliRunner</mainClass>
-        </configuration>
+        </configuration> -->
       </plugin>
       <plugin>
         <artifactId>maven-jar-plugin</artifactId>
@@ -99,4 +99,26 @@
       </plugin>
     </plugins>
   </build>
+   <profiles>
+    <profile>
+      <id>run-server</id>
+      <properties>
+        <adk.mainClass>com.google.adk.web.AdkWebServer</adk.mainClass>
+        <adk.args>--adk.agents.source-dir=target --server.port=8000</adk.args>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>3.1.0</version>
+            <configuration>
+              <mainClass>${adk.mainClass}</mainClass>
+              <commandlineArgs>${adk.args}</commandlineArgs>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
 </project>
