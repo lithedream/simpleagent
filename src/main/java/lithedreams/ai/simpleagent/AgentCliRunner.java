@@ -23,7 +23,7 @@ public class AgentCliRunner {
         }
 
         RunConfig runConfig = RunConfig.builder().build();
-        InMemoryRunner runner = new InMemoryRunner(HelloTimeAgent.ROOT_AGENT);
+        InMemoryRunner runner = new InMemoryRunner(AntisocialNetworkAgent.ROOT_AGENT);
 
         Session session = runner
                 .sessionService()
