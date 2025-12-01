@@ -1,6 +1,15 @@
-# simpleagent
-A simple AI agent with Google ADK
+# antisocial network
+Currently containing the Antisocial Network agent, which is a collection of different personalities replying to the user's query and addressing each other, enabled to use Google search.
 
+The personalities included are
+
+Chad: overly confident and dismissive
+Nina: supportive but slightly passive-aggressive
+Alex: sarcastic and cynical
+Pat:  conspiratorial and paranoid
+John: the most grounded, reasoning on all points of view and offering the best reply
+
+# how to run
 Copy .env.example to .env and set GOOGLE_API_KEY before running the app.
 The CLI reads GOOGLE_API_KEY from your environment at startup.
 
