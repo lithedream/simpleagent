@@ -4,9 +4,13 @@ Currently containing the Antisocial Network agent, which is a collection of diff
 The personalities included are
 
 Chad: overly confident and dismissive
+
 Nina: supportive but slightly passive-aggressive
+
 Alex: sarcastic and cynical
+
 Pat:  conspiratorial and paranoid
+
 John: the most grounded, reasoning on all points of view and offering the best reply
 
 # how to run
